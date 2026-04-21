@@ -2,7 +2,7 @@
 
 A clean, responsive personal portfolio built from scratch with HTML, CSS, and JavaScript — no frameworks, no dependencies, no build step. Designed to showcase a career transition from automotive service operations into DevOps and cloud engineering.
 
-Live at: **`yoursite.com`** ← add your URL here after deploying
+**[View Live Site →](https://jxsta.github.io/devops-portfolio-site)**
 
 ---
 
@@ -11,6 +11,19 @@ Live at: **`yoursite.com`** ← add your URL here after deploying
 This project serves two purposes: it's a working portfolio site, and it's itself a demonstration of the skills it describes. The site is version-controlled on GitHub, deployed via a CI/CD pipeline, and served over HTTPS with a custom domain — the same workflow used to ship production web applications.
 
 The content focuses on honest, entry-level DevOps skills: Linux administration, cloud basics, Git, and CI/CD — paired with a decade of operations and customer-facing experience.
+
+---
+
+## Live Demo
+
+**[https://jxsta.github.io/devops-portfolio-site](https://jxsta.github.io/devops-portfolio-site)**
+
+Hosted on GitHub Pages from the `main` branch. To enable:
+1. Go to **Settings → Pages**
+2. Set source to **Deploy from a branch** → `main` → `/ (root)`
+3. The URL above will go live within a few minutes
+
+To connect a custom domain later, add a `CNAME` file and configure DNS with your registrar.
 
 ---
 
@@ -94,52 +107,52 @@ python3 -m http.server 8000
 
 ---
 
-## Planned Deployment Flow
+## Deployment
 
-The goal is to deploy this site using the same CI/CD pattern described in the featured project section.
+**Current:** GitHub Pages — `https://jxsta.github.io/devops-portfolio-site`
+
+**Planned upgrade (AWS pipeline):**
+
+The featured project on this site describes an end-to-end AWS deployment pipeline. The goal is to migrate this site onto that same infrastructure:
 
 ```
-git push → GitHub Actions → build/validate → deploy to S3 → CloudFront invalidation → live
+git push → GitHub Actions → aws s3 sync → CloudFront invalidation → live
 ```
 
-**Steps to deploy to AWS:**
-
+Steps to implement:
 1. Create an S3 bucket with static website hosting enabled
-2. Set bucket policy to allow public read
-3. Create a CloudFront distribution pointing to the S3 origin
-4. Add a custom domain via Route 53 (or any DNS provider)
-5. Issue an SSL certificate through ACM
-6. Add a `.github/workflows/deploy.yml` that runs on push to `main`:
-   - Uses `aws s3 sync` to upload changed files
-   - Runs a CloudFront invalidation to clear the CDN cache
+2. Set a bucket policy for public read access
+3. Create a CloudFront distribution pointed at the S3 origin
+4. Issue an SSL certificate via ACM
+5. Add a custom domain through Route 53 (or any DNS provider)
+6. Add `.github/workflows/deploy.yml` to automate the sync on every push to `main`
 
-**Alternative (simpler):** GitHub Pages with a `CNAME` file — free, no AWS account needed.
-
-```bash
-# Enable GitHub Pages
-# Settings → Pages → Deploy from branch → main → / (root)
-# Add CNAME file with your domain name
-echo "yoursite.com" > CNAME
-git add CNAME && git commit -m "add custom domain" && git push
-```
+This migration is intentional — it's a chance to document a real deployment process rather than just describe one.
 
 ---
 
 ## Screenshots
 
-> Replace these placeholders with actual screenshots after deployment.
+<p align="center">
+  <img src="assets/screenshots/homepage-desktop.png" width="68%" alt="Homepage — desktop view" />
+  &nbsp;
+  <img src="assets/screenshots/homepage-mobile.png" width="24%" alt="Homepage — mobile view" />
+</p>
+<p align="center"><em>Desktop and mobile — responsive layout</em></p>
 
-| Section | Preview |
-|---------|---------|
-| Hero | `screenshots/hero.png` |
-| About + Skills | `screenshots/about-skills.png` |
-| Featured Project | `screenshots/featured-project.png` |
-| Mobile view | `screenshots/mobile.png` |
+<br />
 
-To add screenshots:
-1. Take a screenshot of each section
-2. Save them to a `screenshots/` folder in this repo
-3. Update the table above with: `![Hero section](screenshots/hero.png)`
+<p align="center">
+  <img src="assets/screenshots/featured-project.png" width="100%" alt="Featured Project section" />
+</p>
+<p align="center"><em>Featured Project — Cloud Website Deployment Pipeline</em></p>
+
+<br />
+
+<p align="center">
+  <img src="assets/screenshots/contact-section.png" width="100%" alt="Contact section" />
+</p>
+<p align="center"><em>Contact section with social links</em></p>
 
 ---
 
@@ -171,9 +184,9 @@ All content is in `index.html`. Search and replace these placeholders:
 | `[Start Year]` / `[End Year]` | Employment dates |
 | `[Dealership or Company Name]` | Your employer |
 | `youremail@example.com` | Your email |
-| `yourusername` | Your GitHub username |
+| `yourusername` | `jxsta` |
 | `yourprofile` | Your LinkedIn slug |
-| `yoursite.com` | Your deployed site URL |
+| `yoursite.com` | `jxsta.github.io/devops-portfolio-site` (or custom domain) |
 
 To change colors, edit the CSS variables at the top of `style.css`:
 
