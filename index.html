@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal portfolio of [Your Name] — transitioning from automotive service operations into DevOps and cloud engineering." />
+  <title>[Your Name] — DevOps Portfolio</title>
+
+  <!-- Theme color: matches dark background on mobile browser chrome -->
+  <meta name="theme-color" content="#0b0c11" />
+
+  <!-- Open Graph tags: controls how this page looks when shared on LinkedIn,
+       Slack, iMessage, etc. Replace content values with your real info. -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://yoursite.com" />
+  <meta property="og:title"       content="[Your Name] — DevOps Portfolio" />
+  <meta property="og:description" content="Transitioning from automotive service operations into DevOps and cloud engineering. Projects, skills, and experience." />
+  <meta property="og:image"       content="https://yoursite.com/og-preview.png" />
+
+  <!--
+    Google Fonts:
+    - Archivo Black  → headings (bold, industrial)
+    - IBM Plex Sans  → body text (clean, technical)
+    - IBM Plex Mono  → labels, code, eyebrows
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+       Fixed at top; scrolls with page via script.js.
+       Edit the logo initials and nav link labels as needed.
+  ============================================================ -->
+  <header id="navbar">
+    <div class="nav-inner container">
+
+      <!-- Logo: change "YN" to your initials -->
+      <a href="#hero" class="nav-logo">YN<span class="dot">.</span></a>
+
+      <!-- Hamburger button — only visible on mobile -->
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <!-- Nav links — hidden on mobile until hamburger is tapped -->
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about"            class="nav-link">About</a></li>
+          <li><a href="#skills"           class="nav-link">Skills</a></li>
+          <li><a href="#featured-project" class="nav-link">Projects</a></li>
+          <li><a href="#experience"       class="nav-link">Experience</a></li>
+          <li><a href="#contact"          class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- ============================================================
+       SECTION 1: HERO
+       Full-viewport intro. Edit name, title, and tagline below.
+  ============================================================ -->
+  <section id="hero">
+
+    <!-- Decorative dot-grid background (pure CSS — see style.css) -->
+    <div class="hero-dots" aria-hidden="true"></div>
+
+    <!-- Amber glow blob behind the text -->
+    <div class="hero-glow" aria-hidden="true"></div>
+
+    <div class="container hero-content">
+
+      <!-- Small label above the name -->
+      <p class="eyebrow">// career transition → devops &amp; cloud</p>
+
+      <!-- *** EDIT: Replace with your real name *** -->
+      <h1 class="hero-name">Your Name</h1>
+
+      <!-- One-line title -->
+      <p class="hero-title">
+        <span class="mono-label">aspiring</span>&nbsp; DevOps &amp; Cloud Engineer
+      </p>
+
+      <!-- Short tagline — keep it honest, not sales-y -->
+      <p class="hero-tagline">
+        10+ years running automotive service operations.<br />
+        Now building pipelines, configuring servers, and making the switch.
+      </p>
+
+      <!-- CTA buttons -->
+      <div class="hero-actions">
+        <a href="#featured-project" class="btn btn-primary">View Projects</a>
+        <a href="#contact"          class="btn btn-outline">Let's Talk</a>
+      </div>
+
+      <!-- Social/profile links -->
+      <!-- *** EDIT: Replace href values with your real URLs *** -->
+      <div class="hero-social">
+
+        <a href="https://github.com/yourusername"
+           class="social-link" target="_blank" rel="noopener noreferrer"
+           aria-label="GitHub profile">
+          <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+          </svg>
+          GitHub
+        </a>
+
+        <a href="https://linkedin.com/in/yourprofile"
+           class="social-link" target="_blank" rel="noopener noreferrer"
+           aria-label="LinkedIn profile">
+          <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          LinkedIn
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Decorative scroll hint at bottom of hero -->
+    <div class="scroll-indicator" aria-hidden="true">
+      <span class="mono-label">scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       SECTION 2: ABOUT
+       Two-column: bio text on left, quick-stats card on right.
+       Edit the paragraph text and facts to match your real story.
+  ============================================================ -->
+  <section id="about" class="reveal">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-num mono-label">01</span>
+        <h2 class="section-title">About</h2>
+      </div>
+
+      <div class="about-grid">
+
+        <!-- Left column: your story in your own words -->
+        <div class="about-text">
+          <p>
+            I spent over 10 years in automotive service — coordinating repair workflows, managing
+            customer expectations, and keeping a busy shop running on schedule. I got good at
+            juggling a lot of moving pieces, communicating clearly under pressure, and figuring
+            out problems before they turned into bigger ones.
+          </p>
+          <p>
+            A while back I started getting curious about how the software and systems I used every
+            day actually worked. That turned into a habit: watching tutorials after work, setting
+            up a home lab, breaking things and then figuring out how to fix them.
+          </p>
+          <p>
+            Now I'm focused on building real projects and working toward a career in DevOps or
+            cloud operations. I'm not going to pretend I know everything — I'm still learning.
+            But I pick things up fast, I document what I do, and I don't quit when something
+            doesn't work on the first try.
+          </p>
+
+          <!-- *** EDIT: Update these facts to match your situation *** -->
+          <ul class="about-facts">
+            <li><span class="fact-label">Location</span>[Your City, State]</li>
+            <li><span class="fact-label">Currently learning</span>AWS, Docker, CI/CD pipelines</li>
+            <li><span class="fact-label">Background</span>Automotive service &amp; operations management</li>
+            <li><span class="fact-label">Open to</span>Entry-level DevOps, cloud support, IT operations</li>
+          </ul>
+        </div>
+
+        <!-- Right column: stat card -->
+        <div class="about-aside">
+          <div class="stat-card">
+
+            <div class="stat-row">
+              <span class="stat-number">10+</span>
+              <span class="stat-desc">years in<br />operations</span>
+            </div>
+
+            <div class="stat-divider"></div>
+
+            <p class="stat-section-label mono-label">Building with:</p>
+            <ul class="stat-list">
+              <li>Linux &amp; Bash</li>
+              <li>Git &amp; GitHub</li>
+              <li>AWS (S3, EC2, IAM)</li>
+              <li>Docker (basics)</li>
+              <li>GitHub Actions</li>
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECTION 3: SKILLS
+       Grouped skill tags. Add, remove, or rename tags freely.
+       "tag-soft" style = transferable/soft skills (slightly different look)
+  ============================================================ -->
+  <section id="skills" class="reveal">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-num mono-label">02</span>
+        <h2 class="section-title">Skills</h2>
+      </div>
+
+      <p class="skills-intro">
+        Technical skills I'm actively building, alongside the operational and
+        communication experience I've spent a decade developing.
+      </p>
+
+      <div class="skills-grid">
+
+        <div class="skill-group">
+          <h3 class="skill-group-label">Technical</h3>
+          <div class="tag-cloud">
+            <span class="tag">Linux (Ubuntu)</span>
+            <span class="tag">Bash scripting</span>
+            <span class="tag">Git &amp; GitHub</span>
+            <span class="tag">AWS S3</span>
+            <span class="tag">AWS EC2</span>
+            <span class="tag">AWS IAM</span>
+            <span class="tag">GitHub Actions</span>
+            <span class="tag">Docker (basics)</span>
+            <span class="tag">Nginx</span>
+            <span class="tag">HTML &amp; CSS</span>
+            <span class="tag">SSH</span>
+            <span class="tag">VS Code</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-label">Workflow &amp; Tools</h3>
+          <div class="tag-cloud">
+            <span class="tag">CI/CD pipelines</span>
+            <span class="tag">Version control</span>
+            <span class="tag">Markdown docs</span>
+            <span class="tag">VirtualBox</span>
+            <span class="tag">Cloudflare</span>
+            <span class="tag">AI-assisted building</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-label">Transferable</h3>
+          <div class="tag-cloud">
+            <span class="tag tag-soft">Team coordination</span>
+            <span class="tag tag-soft">Customer communication</span>
+            <span class="tag tag-soft">Process documentation</span>
+            <span class="tag tag-soft">Problem-solving under pressure</span>
+            <span class="tag tag-soft">Staff training &amp; onboarding</span>
+            <span class="tag tag-soft">Workflow optimization</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECTION 4: FEATURED PROJECT
+       Your strongest or most complete project gets a big card.
+       Edit the description, stack tags, and links below.
+  ============================================================ -->
+  <section id="featured-project" class="reveal">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-num mono-label">03</span>
+        <h2 class="section-title">Featured Project</h2>
+      </div>
+
+      <div class="featured-card">
+
+        <!-- Card top bar -->
+        <div class="featured-top">
+          <span class="mono-label featured-eyebrow">// featured build</span>
+          <span class="status-badge">
+            <span class="status-dot" aria-hidden="true"></span>
+            deployed
+          </span>
+        </div>
+
+        <div class="featured-body">
+
+          <!-- Left: project details -->
+          <div class="featured-info">
+            <h3 class="featured-title">Cloud Website Deployment Pipeline</h3>
+
+            <p class="featured-desc">
+              Built an end-to-end deployment pipeline for a static website using AWS and GitHub Actions.
+              Every push to the main branch automatically builds and deploys the site to an S3 bucket —
+              no manual uploads, no FTP, no wondering if it worked.
+            </p>
+            <p class="featured-desc">
+              Also set up CloudFront for HTTPS delivery and connected a custom domain through Route 53.
+              Hit a lot of walls along the way — IAM permission errors, CORS issues, a CloudFront cache
+              that refused to clear. Documented all of it in the repo's README.
+            </p>
+
+            <!-- Tech stack -->
+            <div class="featured-stack">
+              <span class="mono-label stack-label">Stack:</span>
+              <div class="tag-cloud">
+                <span class="tag tag-amber">AWS S3</span>
+                <span class="tag tag-amber">CloudFront</span>
+                <span class="tag tag-amber">Route 53</span>
+                <span class="tag tag-amber">GitHub Actions</span>
+                <span class="tag tag-amber">IAM</span>
+                <span class="tag tag-amber">HTML / CSS / JS</span>
+              </div>
+            </div>
+
+            <!-- Project links — *** EDIT: replace with your real URLs *** -->
+            <div class="featured-links">
+              <a href="https://github.com/yourusername/cloud-deployment-pipeline"
+                 class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                View on GitHub
+              </a>
+              <a href="https://yoursite.com"
+                 class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                Live Demo →
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: pipeline flow diagram (CSS-only) -->
+          <div class="featured-diagram" aria-label="Deployment pipeline flow" role="img">
+            <div class="pipeline">
+              <div class="pipe-step">
+                <div class="pipe-icon-box">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                  </svg>
+                </div>
+                <span class="pipe-label">git push</span>
+              </div>
+
+              <div class="pipe-connector" aria-hidden="true"></div>
+
+              <div class="pipe-step">
+                <div class="pipe-icon-box">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+                  </svg>
+                </div>
+                <span class="pipe-label">GH Actions</span>
+              </div>
+
+              <div class="pipe-connector" aria-hidden="true"></div>
+
+              <div class="pipe-step">
+                <div class="pipe-icon-box">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <path d="M3 15a4 4 0 0 0 4 4h9a5 5 0 1 0-1.5-9.7A7 7 0 1 0 3 15z"/>
+                  </svg>
+                </div>
+                <span class="pipe-label">S3 deploy</span>
+              </div>
+
+              <div class="pipe-connector" aria-hidden="true"></div>
+
+              <div class="pipe-step pipe-step-final">
+                <div class="pipe-icon-box pipe-icon-amber">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z"/>
+                  </svg>
+                </div>
+                <span class="pipe-label">Live site</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECTION 5: ADDITIONAL PROJECTS
+       Two cards in a 2-column grid.
+       Edit titles, descriptions, tags, and links.
+  ============================================================ -->
+  <section id="projects" class="reveal">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-num mono-label">04</span>
+        <h2 class="section-title">Additional Projects</h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project card 1: Linux server setup -->
+        <div class="project-card">
+
+          <div class="project-card-top">
+            <div class="project-icon-box" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+              </svg>
+            </div>
+            <!-- *** EDIT: Replace href with your real GitHub link *** -->
+            <a href="https://github.com/yourusername/linux-server-setup"
+               class="project-gh-link" target="_blank" rel="noopener noreferrer"
+               aria-label="View on GitHub">
+              <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+              </svg>
+            </a>
+          </div>
+
+          <h3 class="project-title">Linux Server Setup and Web Hosting</h3>
+          <p class="project-desc">
+            Rented a cheap VPS, installed Ubuntu, and configured Nginx to serve a static site over HTTPS.
+            Set up SSH key auth, basic firewall rules with UFW, and pointed a domain at the server using
+            DNS records. More troubleshooting than expected — which is probably the point.
+          </p>
+
+          <div class="tag-cloud project-tags">
+            <span class="tag tag-sm">Ubuntu</span>
+            <span class="tag tag-sm">Nginx</span>
+            <span class="tag tag-sm">SSH</span>
+            <span class="tag tag-sm">UFW</span>
+            <span class="tag tag-sm">Let's Encrypt</span>
+            <span class="tag tag-sm">DNS</span>
+          </div>
+
+        </div>
+
+
+        <!-- Project card 2: This portfolio site -->
+        <div class="project-card">
+
+          <div class="project-card-top">
+            <div class="project-icon-box" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <!-- *** EDIT: Replace href with your real GitHub link *** -->
+            <div class="project-gh-links">
+              <a href="https://github.com/yourusername/portfolio-site"
+                 class="project-gh-link" target="_blank" rel="noopener noreferrer"
+                 aria-label="View on GitHub">
+                <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <h3 class="project-title">GitHub Portfolio Website</h3>
+          <p class="project-desc">
+            This site. Written from scratch with plain HTML, CSS, and JavaScript — no templates or
+            page builders. Focused on keeping the code clean and easy to edit later. Hosted on
+            GitHub Pages and connected to a custom domain. Good practice for writing commit
+            messages that actually mean something.
+          </p>
+
+          <div class="tag-cloud project-tags">
+            <span class="tag tag-sm">HTML</span>
+            <span class="tag tag-sm">CSS</span>
+            <span class="tag tag-sm">JavaScript</span>
+            <span class="tag tag-sm">GitHub Pages</span>
+            <span class="tag tag-sm">Custom Domain</span>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECTION 6: EXPERIENCE
+       Reverse-chronological timeline.
+       Add or remove .timeline-item blocks as needed.
+  ============================================================ -->
+  <section id="experience" class="reveal">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-num mono-label">05</span>
+        <h2 class="section-title">Experience</h2>
+      </div>
+
+      <div class="timeline">
+
+        <!-- Most recent position first -->
+        <!-- *** EDIT: Replace company name, dates, and bullet points *** -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <div class="timeline-meta">
+              <h3 class="timeline-role">Service Advisor / Operations Lead</h3>
+              <span class="timeline-date mono-label">[Start Year] — Present</span>
+            </div>
+            <p class="timeline-company">[Dealership or Company Name] &middot; [City, State]</p>
+            <ul class="timeline-bullets">
+              <li>Managed daily intake of 20–30 repair orders, coordinating between technicians, parts, and customers</li>
+              <li>Primary point of contact for customers on repair status, timelines, and cost approvals</li>
+              <li>Trained and onboarded new service advisors on processes, software tools, and communication standards</li>
+              <li>Reorganized job dispatch workflow to reduce bottlenecks and improve shop turnaround time</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <div class="timeline-meta">
+              <h3 class="timeline-role">Service Advisor</h3>
+              <span class="timeline-date mono-label">[Start Year] — [End Year]</span>
+            </div>
+            <p class="timeline-company">[Previous Company Name] &middot; [City, State]</p>
+            <ul class="timeline-bullets">
+              <li>Handled customer intake, estimates, and follow-up communications for a mid-volume service department</li>
+              <li>Consistently met service satisfaction and upsell targets across quarterly reviews</li>
+              <li>Adapted quickly to new DMS software rollouts and documented updated workflows for the team</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Education / self-study entry -->
+        <div class="timeline-item timeline-item-alt">
+          <div class="timeline-dot timeline-dot-alt"></div>
+          <div class="timeline-body">
+            <div class="timeline-meta">
+              <h3 class="timeline-role">Self-Directed Tech Education</h3>
+              <span class="timeline-date mono-label">[Year] — Present</span>
+            </div>
+            <p class="timeline-company">Online &mdash; A Cloud Guru, Linux Foundation, freeCodeCamp, and others</p>
+            <ul class="timeline-bullets">
+              <li>Completed Linux fundamentals and server administration coursework</li>
+              <li>Built and deployed personal projects using AWS free tier and a home lab environment</li>
+              <li>Working toward AWS Cloud Practitioner certification</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECTION 7: CONTACT
+       Simple contact section with cards for each channel.
+       Edit the email address and social links below.
+  ============================================================ -->
+  <section id="contact" class="reveal">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-num mono-label">06</span>
+        <h2 class="section-title">Contact</h2>
+      </div>
+
+      <div class="contact-layout">
+
+        <div class="contact-copy">
+          <p>
+            I'm actively looking for entry-level DevOps, cloud support, or IT operations roles.
+            If you're hiring or just want to connect, I'm easy to reach.
+          </p>
+          <p>
+            No pressure — even if it's just to swap notes on breaking Linux configs at midnight.
+          </p>
+        </div>
+
+        <!-- Contact cards — *** EDIT: Replace with your real info *** -->
+        <div class="contact-cards">
+
+          <a href="mailto:youremail@example.com" class="contact-card">
+            <div class="contact-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/>
+              </svg>
+            </div>
+            <div class="contact-card-text">
+              <span class="contact-card-label mono-label">Email</span>
+              <span class="contact-card-value">youremail@example.com</span>
+            </div>
+            <span class="contact-card-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="https://github.com/yourusername" class="contact-card"
+             target="_blank" rel="noopener noreferrer">
+            <div class="contact-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+              </svg>
+            </div>
+            <div class="contact-card-text">
+              <span class="contact-card-label mono-label">GitHub</span>
+              <span class="contact-card-value">github.com/yourusername</span>
+            </div>
+            <span class="contact-card-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="https://linkedin.com/in/yourprofile" class="contact-card"
+             target="_blank" rel="noopener noreferrer">
+            <div class="contact-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </div>
+            <div class="contact-card-text">
+              <span class="contact-card-label mono-label">LinkedIn</span>
+              <span class="contact-card-value">linkedin.com/in/yourprofile</span>
+            </div>
+            <span class="contact-card-arrow" aria-hidden="true">→</span>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer id="footer">
+    <div class="container footer-inner">
+      <span class="mono-label footer-copy">&copy; 2025 [Your Name] &middot; Built with HTML, CSS, and JS.</span>
+      <a href="#hero" class="footer-back mono-label">&#8593; Back to top</a>
+    </div>
+  </footer>
+
+
+  <!-- script.js handles: mobile nav, scroll animations, active nav links -->
+  <script src="script.js"></script>
+
+</body>
+</html>

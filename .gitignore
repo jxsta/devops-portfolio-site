@@ -1,0 +1,41 @@
+# Claude Code internal settings — never commit these
+.claude/
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows system files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Editor directories
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Node (if you ever add a build step)
+node_modules/
+npm-debug.log*
+package-lock.json
+
+# Environment / secrets — never commit these
+.env
+.env.local
+.env*.local
+
+# Build output (if added later)
+dist/
+build/
+out/
+
+# Logs
+*.log
+logs/
